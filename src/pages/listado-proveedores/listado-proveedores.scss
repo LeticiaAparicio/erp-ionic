@@ -1,0 +1,25 @@
+.paginacion {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.paginacion button {
+    margin: 5px;
+    width: 25px;
+    height: 25px;
+}
+
+.oculto {
+    visibility: hidden;
+}
+
+.btn:focus, [type='radio']:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+ion-card-header {
+    background-color: rgb(236, 234, 234);
+}
+

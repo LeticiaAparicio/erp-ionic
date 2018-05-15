@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Artículos</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="crearArticulo()"> 
+          <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-card text-center *ngFor="let articulo of articulos">
+    <ion-card-header text-wrap>
+      <h2> <strong>{{articulo.referencia}}</strong> </h2>
+      <h2>{{articulo.precio}} €</h2>
+    </ion-card-header>
+    <ion-card-content>
+      <button ion-button icon-only (click)="verArticulo(articulo)">
+          <ion-icon name="eye"></ion-icon>
+      </button>
+      <button ion-button icon-only color="secondary" (click)="editarArticulo(articulo)">
+          <ion-icon name="create"></ion-icon>
+      </button>
+      <button ion-button icon-only color="danger" (click)="eliminarArticulo(articulo._id)">
+          <ion-icon name="trash"></ion-icon>     
+      </button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
